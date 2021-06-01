@@ -1,0 +1,58 @@
+﻿@page "/"
+
+<div>
+    <h3>Movies</h3>
+    @if (Movies == null)
+    {
+        <img src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif"/>
+    }
+    else if (Movies.Count == 0)
+    {
+        <text>There's no movies to show...</text>
+    }
+    else
+    {
+        @for (int x = 0; x < Movies.Count; x++)
+        {
+            <div>
+                @if (x == Movies.Count - 1)
+                {
+                    <p>Esta es la ultima película</p>
+                }
+                <p>@(x + 1)) Title: <b>@Movies[x].Title</b></p>
+                <p>Release Date: <b>@Movies[x].ReleaseDate</b></p>
+            </div>
+        }
+    }
+</div>
+
+@code {
+
+    public Movie SpiderMan { get { return GetMovie(); } }
+    public List<Movie> Movies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(3000);
+        Movies = GetMovies();
+    }
+
+    private Movie GetMovie()
+    {
+        return new Movie()
+        {
+            Title = "Spider-Man: Far From Home",
+            ReleaseDate = DateTime.Now,
+        };
+    }
+
+    private List<Movie> GetMovies()
+    {
+        return new List<Movie>()
+        {
+            new Movie() { Title = "Spider-Man: Far From Home", ReleaseDate = DateTime.Now },
+            new Movie() { Title = "Peaky Blinders", ReleaseDate = DateTime.Now },
+            new Movie() { Title = "Vikings", ReleaseDate = DateTime.Now }
+        };
+    }
+}
