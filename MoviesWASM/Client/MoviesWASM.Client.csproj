@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Shared\Components\Generics\ModalConfirm.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.6" PrivateAssets="all" />
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
@@ -12,6 +16,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\MoviesWASM.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Shared\Components\Generics\ModalConfirm.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Shared\Components\Generics\ModalConfirm.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Shared\Components\Generics\ModalConfirm.razor" />
   </ItemGroup>
 
 </Project>
