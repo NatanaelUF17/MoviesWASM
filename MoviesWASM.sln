@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesWASM.Server", "MoviesWASM\Server\MoviesWASM.Server.csproj", "{2620CFDC-8D8F-475B-9FDB-3081A58659D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesWASM.Server", "MoviesWASM\Server\MoviesWASM.Server.csproj", "{2620CFDC-8D8F-475B-9FDB-3081A58659D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesWASM.Client", "MoviesWASM\Client\MoviesWASM.Client.csproj", "{C41CE339-190C-44E3-92D9-27C3C47DDBB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesWASM.Client", "MoviesWASM\Client\MoviesWASM.Client.csproj", "{C41CE339-190C-44E3-92D9-27C3C47DDBB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesWASM.Shared", "MoviesWASM\Shared\MoviesWASM.Shared.csproj", "{102ED355-05B7-4D67-BA53-A40B07932630}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesWASM.Shared", "MoviesWASM\Shared\MoviesWASM.Shared.csproj", "{102ED355-05B7-4D67-BA53-A40B07932630}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,38 @@
+﻿@typeparam T
+
+@if (List == null)
+{
+    if (Loading == null)
+    {
+        <em>Loading...</em>
+    }
+    else
+    {
+        @Loading
+    }
+}
+else if (List.Count == 0)
+{
+    @if (NoData == null)
+    {
+        <text>There's no data to display</text>
+    }
+    else
+    {
+        @NoData
+    }
+}
+else
+{
+    foreach (var item in List)
+    {
+        @AvailableData(item);
+    }
+}
+
+@code {
+    [Parameter] public List<T> List { get; set; }
+    [Parameter] public RenderFragment Loading { get; set; }
+    [Parameter] public RenderFragment NoData { get; set; }
+    [Parameter] public RenderFragment<T> AvailableData { get; set; }
+}
